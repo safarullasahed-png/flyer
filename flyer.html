@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maths Classes Flyer – 2026</title>
+
+<style>
+:root{
+  --accent:#1a73e8;
+  --liteblue:#dff0ff;
+  --card:#ffffff;
+  font-family: Arial, sans-serif;
+}
+body{
+  margin:0;
+  background: url("back.PNG") no-repeat center center/cover;
+}
+.container{
+  max-width:1080px;
+  margin:20px auto;
+  padding:15px;
+}
+.flyer{
+  background: rgba(255,255,255,0.88);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 8px 30px rgba(0,0,0,0.12);
+  padding:20px;
+}
+.top{
+  display:flex;
+  gap:20px;
+  padding:20px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+}
+.hero-img{
+  flex:0 0 260px;
+  max-width:260px;
+}
+.hero-img img{
+  width:100%;
+  border-radius:14px;
+  border:4px solid rgba(255,255,255,0.7);
+}
+.hero-info{flex:1;min-width:260px;text-align:left;}
+.tag{
+  display:inline-block;
+  background:var(--accent);
+  color:#fff;
+  padding:5px 12px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:14px;
+}
+.start{
+  display:inline-block;
+  margin-top:8px;
+  background:#ff3b62;
+  color:#fff;
+  padding:5px 14px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:15px;
+}
+h1{margin:10px 0 6px;font-size:24px;font-weight:800;}
+p.lead{margin:0;color:#444;font-size:16px;}
+.badge{
+  display:inline-block;
+  background:#000;
+  color:#fff;
+  padding:6px 12px;
+  border-radius:8px;
+  font-weight:700;
+  margin-top:12px;
+  font-size:13px;
+}
+.details{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+  padding:20px;
+}
+.box{
+  background: var(--liteblue);
+  border-radius:12px;
+  padding:16px;
+  min-height:120px;
+  box-shadow:0 3px 12px rgba(0,0,0,0.07);
+}
+.box h3{margin:0 0 6px;font-size:18px;font-weight:700;}
+.time{font-weight:700;margin-bottom:6px;}
+.payment{
+  background:var(--accent);
+  color:#fff;
+  padding:6px 12px;
+  border-radius:8px;
+  display:inline-block;
+  font-weight:700;
+}
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+  padding:20px;
+}
+.small{font-size:14px;color:#444;}
+.footer{
+  padding:16px;
+  border-top:1px dashed rgba(0,0,0,0.1);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  font-size:14px;
+  gap:10px;
+  text-align:center;
+}
+.cta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
+.btn{
+  background:#222;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  font-size:14px;
+  cursor:pointer;
+}
+@media(max-width:720px){
+  .top{flex-direction:column;}
+  .hero-img{width:90%;max-width:350px;}
+  .details{grid-template-columns:1fr;}
+  .grid-3{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <div class="flyer" id="flyerDiv">
+
+    <!-- TOP -->
+    <div class="top">
+      <div class="hero-img">
+        <img src="maths.PNG" alt="Teacher Cartoon">
+      </div>
+
+      <div class="hero-info">
+        <span class="tag">A+ RESULT FOCUS</span>
+        <span class="start">STARTS ON: DECEMBER 20</span>
+
+        <h1>Maths Classes — Grades 6 to 11 (2026 Batch)</h1>
+        <p class="lead">Weekly structured lessons + full exam practice.<br>Every Saturday & Sunday, multiple batches.</p>
+
+        <div style="margin-top:10px">
+          <span class="badge">Dedicated Maths Training</span>
+          <span style="margin-left:6px;color:#555">• Conducted by: <strong>N. Fathima Nijee</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLASS DETAILS -->
+    <div class="details" id="classDetails"></div>
+
+    <!-- EXTRA INFO -->
+    <div class="grid-3">
+      <div class="box" style="background:#fff;">
+        <h3>வகுப்புகள்</h3>
+        <p class="small">குழு / தனி வகுப்பு<br>மாணவர்கள் புரியும் வரை விளக்கங்களுடன் கற்பித்தல்.</p>
+      </div>
+      <div class="box" style="background:#fff;">
+        <h3>சிறப்பம்சங்கள்</h3>
+        <p class="small">கடந்தகால வினாத்தாள்கள்<br>Step-by-step explanation<br>Special workbook included.</p>
+      </div>
+      <div class="box" style="background:#fff;">
+        <h3>Contact</h3>
+        <p class="small">📞 0757462709<br>Teacher: N. Fathima Nijee</p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div><strong>Mode:</strong> Online / Physical • <strong>Batch:</strong> 2026</div>
+      <div class="cta">
+        <button class="btn" onclick="registerUser()">REGISTER</button>
+        <button class="btn" onclick="shareFlyerLink()">SHARE</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// Grade details array
+const classes = [
+  { grade: "6", time: "7am–8am" },
+  { grade: "7", time: "8am–9am" },
+  { grade: "8", time: "9am–10am" },
+  { grade: "9", time: "3pm–4pm" },
+  { grade: "10", time: "4pm–5pm" },
+  { grade: "11", time: "5pm–6pm" }
+];
+
+// Populate class details
+const container = document.getElementById("classDetails");
+classes.forEach(c=>{
+  const div = document.createElement("div");
+  div.className = "box";
+  div.innerHTML = `<h3>Grade ${c.grade}</h3>
+  <div class="time">${c.time}</div>
+  <div class="small">Monthly Payment</div>
+  <div style="margin-top:6px"><span class="payment">600/-</span></div>`;
+  container.appendChild(div);
+});
+
+// Register button
+function registerUser(){
+  let name = prompt("Student Name?");
+  let grade = prompt("Grade?");
+  let phone = prompt("Phone?");
+  if(!name || !grade || !phone){ alert("All details required!"); return; }
+  let msg = `🎓 New Student Registration%0A👤 Name: ${name}%0A📘 Grade: ${grade}%0A📞 Phone: ${phone}`;
+  window.open("https://wa.me/94757462709?text="+msg,"_blank");
+}
+
+// Share button
+function shareFlyerLink(){
+  const link = window.location.href;
+  if(navigator.share){
+    navigator.share({ url: link });
+  } else {
+    prompt("Copy this link to share:", link);
+  }
+}
+</script>
+
+</body>
+</html>
